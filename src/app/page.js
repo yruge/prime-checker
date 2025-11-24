@@ -1,19 +1,28 @@
+'use client';
+import { useState } from 'react';
+
 import isPrime from './prime-logic.js';
 
 
 export default function Home() {
+
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value); 
+  }
+
   function handleCheck() {
-    const input = document.querySelector('#number-input');
-    const convertedNum = parseInt(input.value, 10);
+    const convertedNum = parseInt(inputValue, 10);
     const check = isPrime(convertedNum);
 
     if(check)
     {
-      alert(`${input.value} is a prime number.`);
+      alert(`${inputValue} is a prime number.`);
     } 
     else if(!check)
     {
-      alert(`${input.value} is not a prime number.`);
+      alert(`${inputValue} is not a prime number.`);
     }
   }
 
@@ -21,8 +30,8 @@ export default function Home() {
   return (
     <div>
       <h1>Prime Number Checker</h1>
-      <input type="number" id="number-input" placeholder="Enter a number"/>
-      <button onClick={handleCheck}>Check</button>
+      <input type="number" value={inputValue} onChange={handleChange} placeholder="Enter a number"/>
+      <button type="button" onClick={handleCheck}>Check</button>
     </div>
   );
 }
