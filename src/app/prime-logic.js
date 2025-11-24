@@ -8,9 +8,7 @@ export function isPrime(num) {
         let factorNum = [];
         for(let i = 1 ; i <= num ; i++)
         {
-            let factorNums = num % i;
-
-            if(factorNums === 0)
+            if(num % i === 0)
             {
                 factorNum.push(i);
             }
