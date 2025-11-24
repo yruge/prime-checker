@@ -28,7 +28,7 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div className='centered-content'>
       <h1>Prime Number Checker</h1>
       <input type="number" value={inputValue} onChange={handleChange} placeholder="Enter a number"/>
       <button type="button" onClick={handleCheck}>Check</button>
