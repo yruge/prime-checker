@@ -15,7 +15,7 @@ Language: JavaScript
 
 Styling: Global CSS
 
-# Features
+# ✨ Features
 - **Prime Number Verification:** Instantly calculates whether a user-inputted integer is a prime number or composite.
 - **Instant Feedback:** Delivers immediate results via browser-native alert popups (as seen in your demo).
 - **Minimalist Interface:** A clean, distraction-free UI focused purely on functionality.
